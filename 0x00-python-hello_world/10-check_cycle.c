@@ -5,23 +5,18 @@
 int check_cycle(listint_t *list)
 {
 
-	listint_t *p;
+	listint_t *p, *x;
 	p = list;
-	while(p->next)
+	x = list;
+	
+	while(x->next != NULL && x != NULL)
 	{
-	if(p->next != NULL)
-	{
-	printf("inside has cycle\n");
-	p = p->next;
+		p = p->next;
+		x = x->next->next;
+		if (x == p)
+		{
+			return (1);
+		}
 	}
-	if(p->next == NULL)
-	{
-		printf("no cycle");
-		break;
-		return (1);
-
-	}
-	}
-
 	return(0);
 }
