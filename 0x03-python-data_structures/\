@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+def print_list_integer(my_list=[]):
+    for x in range(0, len(my_list)):
+        if my_list[x] == 'c' or my_list[x] == 'C':
+            pass
+        else:
+            new_list.append(my_list[x])
+    return new_list
