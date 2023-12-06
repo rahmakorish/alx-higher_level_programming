@@ -6,7 +6,8 @@ def simple_delete(a_dictionary, key=""):
         new = a_dictionary.copy()
         for x in a_dictionary.keys():
             if x == key:
-                new.pop(key)
-            else:
-                pass
+                if key in a_dictionary:
+                    new.pop(key)
+                else:
+                    pass
         return new
