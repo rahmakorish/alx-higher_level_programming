@@ -4,4 +4,4 @@ def print_sorted_dictionary(a_dictionary):
         return
     else:
         for x, y in sorted(a_dictionary.items()):
-            print(f'{x} : {y}')
+            print(f"{x}: {y}")
