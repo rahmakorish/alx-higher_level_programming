@@ -5,11 +5,11 @@ def safe_print_list_integers(my_list=[], x=0):
         try:
             if i == x - 1:
                 count += 1
-                print("{:d}".format(my_list[i]), end = "\n")
+                print("{:d}".format(my_list[i]), end="\n")
             else:
                 count += 1
-                print("{:d}".format(my_list[i]), end = '')
+                print("{:d}".format(my_list[i]), end='')
         except (TypeError, ValueError):
-            count -= 1 
+            count -= 1
             pass
     return count
