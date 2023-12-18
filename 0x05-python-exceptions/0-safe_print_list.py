@@ -6,7 +6,7 @@ def safe_print_list(my_list=[], x=0):
         while count < x:
             new.append(my_list[count])
             count += 1
-    except IndexError, TypeError, ValueError:
+    except IndexError:
         pass
     print(''.join(map(str, new)))
     return (count)
