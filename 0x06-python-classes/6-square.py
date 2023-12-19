@@ -29,6 +29,8 @@ class Square:
         self._position = value
         if not type(value) is tuple or not type(value[0]) is int:
             raise TypeError("position must be a tuple of 2 positive integers")
+        if not type(value[1]) is int or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
     """function to return squarea area"""
     def area(self):
         sizex = self.__size
