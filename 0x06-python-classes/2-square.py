@@ -9,7 +9,7 @@ class Square:
         Args:
             size:square size
             """
-        self.size = size
+        self.__size = size
         if not type(size) is int:
             raise TypeError("size must be an integer")
         if size < 0:
