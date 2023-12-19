@@ -28,9 +28,9 @@ class Square:
         if self._size == 0:
             print("")
         else:
-            for x in range(0, self._size+1):
-                if x == self._size:
-                    print(end="\n")
-                    x = 0
-                else:
-                    print(x * "#", end='')
+            for i in range(0, self._size):
+                for x in range(0, self._size+1):
+                    if x == self._size:
+                        print(end="\n")
+                    else:
+                        print("#", end='')
