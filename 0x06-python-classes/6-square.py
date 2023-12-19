@@ -35,7 +35,6 @@ class Square:
         return (sizex * sizex)
     """function to print squarea area"""
     def my_print(self):
-        sqr = self.area()
         if self._size == 0:
             print("")
         else:
