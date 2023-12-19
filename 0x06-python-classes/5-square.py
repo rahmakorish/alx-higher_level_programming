@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """python file"""
 
+
 class Square:
     """class Square that defines a square"""
     def __init__(self, size=0):
@@ -21,6 +22,7 @@ class Square:
     def area(self):
         sizex = self._size
         return (sizex * sizex)
+    """function to print squarea area"""
     def my_print(self):
         sqr = self.area()
         if self._size == 0:
@@ -32,4 +34,3 @@ class Square:
                     x = 0
                 else:
                     print(x * "#", end='')
-
