@@ -38,7 +38,7 @@ class Rectangle:
         # self.__width = None
         self.__height = None
         print("Bye rectangle...")
-    
+
     """function to return squarea area"""
     def area(self):
         return (self.__width * self.__height)
@@ -67,4 +67,10 @@ class Rectangle:
     def width(self):
         self.__width = None
         # self.__height = None
+        print("Bye rectangle...")
+
+    def __del__(self):
+        """destryctor"""
+        self.__width = None
+        self.__height = None
         print("Bye rectangle...")
