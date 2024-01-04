@@ -6,8 +6,8 @@ class Rectangle:
     """new class"""
     def __init__(self, width=0, height=0):
         """constructor."""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
     """getter function for width"""
     @property
     def width(self):
@@ -15,7 +15,6 @@ class Rectangle:
     """setter for width"""
     @width.setter
     def width(self, value):
-        #self.__width = value
         if not type(self.__width) is int:
             raise TypeError("width must be an integer")
         if self.__width < 0:
@@ -28,7 +27,6 @@ class Rectangle:
     """setter for heigth"""
     @height.setter
     def height(self, value):
-        #self.__height = value
         if type(self.__height) is not int:
             raise TypeError("height must be an integer")
         if self.__height < 0:
