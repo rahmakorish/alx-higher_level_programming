@@ -55,6 +55,6 @@ class Rectangle:
             if x != self.height - 1:
                 shape += "\n"
         return shape
-    def __repr__(self):
-        eval()
 
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
