@@ -6,15 +6,15 @@ class Rectangle:
     """new class"""
     number_of_instances = 0
     print_symbol = "#"
-    """class"""
+
     def __init__(self, width=0, height=0):
         """constructor."""
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
-        Rectangle.print_symbol = ""
+
     """getter function for width"""
-    
+
     @property
     def width(self):
         return (self.__width)
@@ -56,7 +56,7 @@ class Rectangle:
     def __str__(self):
         shape = ""
         for x in range(0, self.__height):
-            shape += ('#' * self.__width)
+            shape += (Rectangle.print_symbol * self.__width)
             if x != self.height - 1:
                 shape += "\n"
         return shape
@@ -64,7 +64,7 @@ class Rectangle:
     def __print__(self):
         shape = ""
         for x in range(0, self.__height):
-            shape += ('#' * self.__width)
+            shape += (Rectangle.print_symbol * self.__width)
             if x != self.height - 1:
                 shape += "\n"
         return shape
