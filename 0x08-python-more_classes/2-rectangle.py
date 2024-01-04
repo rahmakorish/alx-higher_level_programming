@@ -34,6 +34,8 @@ class Rectangle:
         self.__height = value
     """function to return squarea area"""
     def area(self):
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return (self.__width * self.__height)
     """function to return rectangle perimeter"""
     def perimeter(self):
