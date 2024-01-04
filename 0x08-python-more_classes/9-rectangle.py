@@ -91,5 +91,5 @@ class Rectangle:
             return rect_1
 
     def square(cls, size=0):
-        cls = Rectangle(cls, cls)
-        return cls
+        new = Rectangle(cls, cls)
+        return new
