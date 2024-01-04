@@ -37,11 +37,16 @@ class Rectangle:
         return (self.__width * self.__height)
     """function to return rectangle perimeter"""
     def perimeter(self):
+        if self.__width == 0 or self.__height == 0:
+            perimet = 0
+            return (perimet)
         perimet = (self.__width + self.__height) * 2
         return (perimet)
     """function to print"""
     def __str__(self):
         shape = ""
+        if self.__width == 0 or self.__height == 0:
+            return shape
         for x in range(0, self.__height):
             shape += ('#' * self.__width)
             if x != self.height - 1:
@@ -50,6 +55,8 @@ class Rectangle:
     """function to print"""
     def __print__(self):
         shape = ""
+        if self.__width == 0 or self.__height == 0:
+            return shape
         if self.__height == 0 or self.__width == 0:
             return shape
         for x in range(0, self.__height):
