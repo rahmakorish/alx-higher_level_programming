@@ -4,15 +4,15 @@
 
 class Rectangle:
     """new class"""
-    #number_of_instances = 0
-    #print_symbol = "#"
+    number_of_instances = 0
+    print_symbol = "#"
     """class"""
     def __init__(self, width=0, height=0):
         """constructor."""
         self.__width = width
         self.__height = height
-        self.number_of_instances = 0
-        self.print_symbol = "#"
+        Rectangle.number_of_instances += 1
+        Rectangle.print_symbol = ""
     """getter function for width"""
     
     @property
@@ -78,5 +78,5 @@ class Rectangle:
         """destryctor"""
         self.__width = None
         self.__height = None
-        # number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
