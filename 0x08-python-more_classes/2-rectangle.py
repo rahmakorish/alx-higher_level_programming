@@ -15,9 +15,9 @@ class Rectangle:
     """setter for width"""
     @width.setter
     def width(self, value):
-        if not type(self.__width) is int:
+        if not type(value) is int:
             raise TypeError("width must be an integer")
-        if self.__width < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
     """getter function for height"""
@@ -27,9 +27,9 @@ class Rectangle:
     """setter for heigth"""
     @height.setter
     def height(self, value):
-        if type(self.__height) is not int:
+        if type(value) is not int:
             raise TypeError("height must be an integer")
-        if self.__height < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
     """function to return squarea area"""
