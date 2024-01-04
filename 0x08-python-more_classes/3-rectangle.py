@@ -50,6 +50,8 @@ class Rectangle:
     """function to print"""
     def __print__(self):
         shape = ""
+        if self.__height == 0 or self.__width == 0:
+            return shape
         for x in range(0, self.__height):
             shape += ('#' * self.__width)
             if x != self.height - 1:
