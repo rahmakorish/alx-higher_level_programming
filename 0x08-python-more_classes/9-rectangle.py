@@ -45,7 +45,7 @@ class Rectangle:
 
     """function to return squarea area"""
     def area(self):
-        return (self.__width * self.__height)
+        return ((self.__width) * (self.__height))
     """function to return rectangle perimeter"""
     def perimeter(self):
         perimet = (self.__width + self.__height) * 2
@@ -90,6 +90,6 @@ class Rectangle:
         else:
             return rect_1
 
+    @classmethod
     def square(cls, size=0):
-        new = Rectangle(cls, cls)
-        return new
+        return cls(size, size)
