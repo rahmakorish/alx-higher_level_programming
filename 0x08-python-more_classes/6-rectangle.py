@@ -12,6 +12,7 @@ class Rectangle:
         self.__height = height
         number_of_instances += 1
     """getter function for width"""
+    
     @property
     def width(self):
         return (self.__width)
