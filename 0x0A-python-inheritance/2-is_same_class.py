@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """class inheretence"""
 
+
 def is_same_class(obj, a_class):
     """class"""
     x = isinstance(obj, a_class)
-    if x :
+    if x:
         return True
-    else:
-        return False
+    return False
