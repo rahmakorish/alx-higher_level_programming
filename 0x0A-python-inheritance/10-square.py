@@ -24,6 +24,14 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
+    def __str__(self):
+        """function to print"""
+        return (f"[Rectangle] {self.__width:d}/{self.__height:d}")
+
+    def __print__(self):
+        """function to print"""
+        return (f"[Rectangle] {self.__width:d}/{self.__height:d}")
+
 
 class Square:
     """class"""
