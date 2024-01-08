@@ -9,6 +9,7 @@ class BaseGeometry:
     def area(self):
         """class method"""
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         """class method"""
         if not isinstance(value, int):
@@ -16,9 +17,9 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("<name> must be greater than 0")
 
+
 class Rectangle(BaseGeometry):
     """class"""
     def __init__(self, width, height):
         self.__width = width
-        self.__height = (height)
-
+        self.__height = height
