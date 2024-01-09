@@ -4,10 +4,6 @@
 
 class MyInt(int):
     """class rebel"""
-    def __init__():
-        """intial"""
-        return (self)
-    """
-    def arthmatic
-        self.equal = "!="
-        self.notequal = "=="""
+    def arthmatic(self, num):
+        """over ride function"""
+        return not super().__arthmatic__(num)
