@@ -1,1 +1,20 @@
-hello
+import unittest
+from io import StringIO
+import sys
+from your_module_name import MyList  # Replace 'your_module_name' with the actual name of your module
+
+
+class TestMyList(unittest.TestCase):
+
+    def setUp(self):
+        self.my_list = MyList([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])
+
+    def test_print_sorted(self):
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        self.my_list.print_sorted()
+
+        sys.stdout = sys.__stdout__
+        expected_output = "1 1 2 3 3 4 5 5 5 6 9\n"
+        self.assertEqual(captured_output.getvalue(), expected_output)
