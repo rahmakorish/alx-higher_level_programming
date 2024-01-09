@@ -4,7 +4,7 @@
 
 class MyInt(int):
     """class rebel"""
-    def __init__(self):
+    def __init__():
         """intial"""
         return (self)
     """
