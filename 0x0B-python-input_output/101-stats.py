@@ -2,7 +2,6 @@
 """advanced task"""
 
 
-
 from sys import stdin
 
 
