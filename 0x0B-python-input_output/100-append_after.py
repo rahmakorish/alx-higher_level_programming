@@ -1,32 +1,17 @@
 #!/usr/bin/python3
-from sys import stdin
+"""advanced tasks"""
 
 
-codes = {"200": 0,'301': 0, '400': 0, '401':0, '404':0, '405':0,'403':0, '500':0}
-
-size = i = 0
-
-def printx():
+def append_after(filename="", search_string="", new_string=""):
     """function"""
-    print(f'file size: {size}')
-    for key, value in sorted(codes.items()):
-        if value > 0:
-            print ('{:s}: {:d}'.format(key, value))
-
-
-
-try:
-    for line in stdin:
-        splitline = line.split()
-        if len(splitline) >= 2:
-            status = splitline[-2]
-            size += int(splitline[-1])
-            if status in codes:
-                codes[status] += 1
-        i += 1
-
-        if i % 10 == 0:
-            printx()
-        printx()
-except KeyboardInterrupt as e:
-    printx()
+    with open(filename, "r", encoding='utf-8') as filex:
+        line = []
+        while 1:
+            linex = filex.readline()
+            if linex == "":
+                break
+            line.append(linex)
+            if search_string in linex:
+                line.append(new_string)
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.writelines(line)
