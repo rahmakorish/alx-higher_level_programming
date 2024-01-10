@@ -1,0 +1,6 @@
+import unittest
+from 0-add_integer import *
+
+class MyFirstTests(unittest.TestCase):
+        def test_add(self):
+                self.isinstance(add_integer(), int)
