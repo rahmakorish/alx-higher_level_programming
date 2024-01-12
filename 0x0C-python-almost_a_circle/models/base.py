@@ -3,7 +3,6 @@
 
 
 class Base:
-    """private class attribute"""
     __nb_objects = 0
 
     """class constructor"""

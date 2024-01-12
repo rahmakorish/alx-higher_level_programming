@@ -1,19 +1,6 @@
 #!/usr/bin/python3
+from base import Base
 """ class Base"""
-
-
-class Base:
-    """private class attribute"""
-    __nb_objects = 0
-
-    """class constructor"""
-    def __init__(self, id=None):
-        """init method"""
-        if (id != None):
-            self.id = id
-        elif (id == None):
-            Base.__nb_objects += 1
-            self.id = self.__nb_objects
 
 
 class Rectangle(Base):
@@ -99,10 +86,30 @@ class Rectangle(Base):
                 shape += "\n"
         print(shape)
 
-    def update(self, *args):
-        attributes = [Rectangle.width,Rectangle.height,Rectangle.x,Rectangle.y]
+    def update(self, *args, **kwargs):
+        attributes = [self.__width,self.__height,self.__x,self.__y]
         count = len(args)
-        for x in args:
-            for z in range(0, count):
-                attributes[z] = x
-            print (x)
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.__width = args[1]
+            if len(args) >= 3:
+                self.__height = args[2]
+            if len(args) >= 4:
+                self.__x = args[3]
+            if len(args) >= 5:
+                self.__y = args[4]
+        elif kwargs != None:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                if key == 'width':
+                    self.__width = value
+                if key == 'height':
+                    self.__height = value
+                if key == 'x':
+                    self.__x = value
+                if key == 'y':
+                    self.__y = value
+                # print(f' {key} ,{value}')
