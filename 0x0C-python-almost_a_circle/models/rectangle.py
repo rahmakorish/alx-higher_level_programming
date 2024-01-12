@@ -27,58 +27,58 @@ class Rectangle(Base):
         super().__init__(id)
 
     @property
+    def width(self):
+        return self.__width
+
+    @width.setter
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be > 0")
         self.__width = value
+    
     @property
-    def width(self):
-        return self.__width
-
-    @property
+    def height(self):
+        return self.__height
+    
+    @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be > 0")
         self.__height = value
-    @property
-    def height(self):
-        return self.__height
     
     @property
+    def x(self):
+        return self.__x
+    @x.setter
     def x(self, value):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
-    @property
-    def x(self):
-        return self.__x
 
     @property
+    def y(self):
+        return self.__y
+
+    @y.setter
     def y(self, value):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-    @property
-    def y(self):
-        return self.__y
 
-    @property
     def area(self):
         """rectangle area"""
-        return (self.width * self.height)
+        return (self.__width * self.__height)
     
-    @property
     def __str__(self):
         return f'[Rectangle] ({self.id:d}) {self.x:d}/{self.y:d} - {self.width:d}/{self.height:d}'
-    @property
     def display(self):
         """ocerride str"""
         shape = ""
@@ -88,5 +88,5 @@ class Rectangle(Base):
             shape += ('#' * self.__width)
             if x != self.height - 1:
                 shape += "\n"
-        return shape
+        print( shape)
 
