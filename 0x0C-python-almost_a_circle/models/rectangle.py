@@ -79,6 +79,10 @@ class Rectangle(Base):
     
     def __str__(self):
         return f'[Rectangle] ({self.id:d}) {self.x:d}/{self.y:d} - {self.width:d}/{self.height:d}'
+    
+    def to_dictionary(self):
+        return dict()
+
     def display(self):
         """ocerride str"""
         shape = ""
@@ -88,5 +92,9 @@ class Rectangle(Base):
             shape += ('#' * self.__width)
             if x != self.height - 1:
                 shape += "\n"
-        print( shape)
-
+        print(shape)
+"""
+    def update(self, *args):
+        count = len(args)
+        for (i = 0 ,i < count, i++):
+            self"""
