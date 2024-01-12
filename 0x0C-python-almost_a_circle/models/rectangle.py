@@ -77,7 +77,7 @@ class Rectangle(Base):
     
     @property
     def __str__(self):
-        print(f'[Rectangle] ({self.id:d}) {self.x:d}/{self.y:d} - {self.width:d}/{self.height:d}')
+        return f'[Rectangle] ({self.id:d}) {self.x:d}/{self.y:d} - {self.width:d}/{self.height:d}'
     @property
     def display(self):
         """ocerride str"""
