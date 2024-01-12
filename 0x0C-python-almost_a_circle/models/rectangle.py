@@ -76,7 +76,17 @@ class Rectangle(Base):
         return (self.width * self.height)
     
     @property
+    def __str__(self):
+        print(f'[Rectangle] ({self.id:d}) {self.x:d}/{self.y:d} - {self.width:d}/{self.height:d}')
+    @property
     def display(self):
-        for x in range (0,self.__height):
-            print('#' * self.width)
+        """ocerride str"""
+        shape = ""
+        if self.__width == 0 or self.__height == 0:
+            return shape
+        for x in range(0, self.__height):
+            shape += ('#' * self.__width)
+            if x != self.height - 1:
+                shape += "\n"
+        return shape
 
