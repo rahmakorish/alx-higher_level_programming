@@ -6,8 +6,9 @@ from rectangle import Rectangle, Base
 class Square(Rectangle):
     """intial"""
     def __init__(self, size, x=0, y=0, id=None):
+        """intializing class"""
         super().__init__(size, size, x, y, id)
-    
+
     @property
     def size(self):
         return (self.width)
@@ -19,13 +20,13 @@ class Square(Rectangle):
         if value < 0:
             raise ValueError("width must be > 0")
         self.width = value
-        #self.height = value
-        #self.size = value
-    
+
     def __str__(self):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
     def to_dictionary(self):
         return dict()
+
     def update(self, *args, **kwargs):
         if args:
             c = len(args)

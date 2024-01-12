@@ -15,33 +15,40 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """width getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """width setter"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be > 0")
         self.__width = value
-    
+
     @property
     def height(self):
+        """height getter"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
+        """height setter"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be > 0")
         self.__height = value
-    
+
     @property
     def x(self):
+        """x getter"""
         return self.__x
+
     @x.setter
     def x(self, value):
+        """x setter"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -50,10 +57,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """y getter"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """y setter"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -63,21 +72,23 @@ class Rectangle(Base):
     def area(self):
         """rectangle area"""
         return (self.__width * self.__height)
-    
+
     def __str__(self):
-        return f'[Rectangle] ({self.id:d}) {self.x:d}/{self.y:d} - {self.width:d}/{self.height:d}'
-    
+        """override str function"""
+        return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
+
     def to_dictionary(self):
+        """print dictionary"""
         return dict()
 
     def display(self):
-        """ocerride str"""
+        """override display()"""
         shape = ""
         if self.__width == 0 or self.__height == 0:
-            for z in range(0,self.__y):
+            for z in range(0, self.__y):
                 shape += (" " * self.__x)
         for k in range(0, self.__height):
-            for z in range(0,self.__y):
+            for z in range(0, self.__y):
                 shape = (" " * self.__x)
                 if z != self.__y - 1:
                     shape = "\n"
@@ -87,7 +98,7 @@ class Rectangle(Base):
         print(shape)
 
     def update(self, *args, **kwargs):
-        attributes = [self.__width,self.__height,self.__x,self.__y]
+        """update()"""
         count = len(args)
         if args:
             if len(args) >= 1:
@@ -100,7 +111,7 @@ class Rectangle(Base):
                 self.__x = args[3]
             if len(args) >= 5:
                 self.__y = args[4]
-        elif kwargs != None:
+        elif kwargs is None:
             for key, value in kwargs.items():
                 if key == 'id':
                     self.id = value
