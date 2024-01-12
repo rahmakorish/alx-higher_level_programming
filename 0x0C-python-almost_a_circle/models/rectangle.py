@@ -79,7 +79,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """print dictionary"""
-        return dict()
+        return {'id':self.id, 'width':self.width, 'height':self.height, 'x':self.x, 'y':self.y}
 
     def display(self):
         """override display()"""
