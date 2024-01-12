@@ -87,10 +87,15 @@ class Rectangle(Base):
         """ocerride str"""
         shape = ""
         if self.__width == 0 or self.__height == 0:
-            return shape
-        for x in range(0, self.__height):
+            for z in range(0,self.__y):
+                shape += (" " * self.__x)
+        for k in range(0, self.__height):
+            for z in range(0,self.__y):
+                shape = (" " * self.__x)
+                if z != self.__y - 1:
+                    shape = "\n"
             shape += ('#' * self.__width)
-            if x != self.height - 1:
+            if k != self.__height - 1:
                 shape += "\n"
         print(shape)
 """
