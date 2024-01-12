@@ -98,8 +98,11 @@ class Rectangle(Base):
             if k != self.__height - 1:
                 shape += "\n"
         print(shape)
-"""
+
     def update(self, *args):
+        attributes = [Rectangle.width,Rectangle.height,Rectangle.x,Rectangle.y]
         count = len(args)
-        for (i = 0 ,i < count, i++):
-            self"""
+        for x in args:
+            for z in range(0, count):
+                attributes[z] = x
+            print (x)
