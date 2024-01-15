@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-from rectangle import Rectangle, Base
+"""this module implement square class"""
+from models.rectangle import Rectangle, Base
 """square class"""
 
 
@@ -11,10 +12,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """size getter"""
         return (self.width)
 
     @size.setter
     def size(self, value):
+        """size setter"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -22,12 +25,15 @@ class Square(Rectangle):
         self.width = value
 
     def __str__(self):
+        """override str"""
         print (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
 
     def to_dictionary(self):
+        """dixtionary """
         return{'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
 
     def update(self, *args, **kwargs):
+        """update"""
         if args:
             c = len(args)
             if c >= 1:
