@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """this module xontain class"""
 from base import Base
-"""class Base"""
 
 
 class Rectangle(Base):
