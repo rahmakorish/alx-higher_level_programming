@@ -76,7 +76,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """override str function"""
-        return f'[Rectangle] ({self.id}) {self.x}/{self.y}'
+        return ('[Rectangle] ({self.id})\
+                {self.x}/{self.y}- {self.width}/{self.height}')
 
     def to_dictionary(self):
         """print dictionary"""
