@@ -19,11 +19,12 @@ class Base:
     def to_json_string(list_dictionaries):
         """returns the JSON string"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return ('[]')
-        return (json.dumps(list_dictionaries))
+            return '[]'
+        else:
+            return (json.dumps(list_dictionaries))
 
     def from_json_string(json_string):
         """returns the list of the JSON string"""
-        if json_string is None:
-            return ({})
+        if json_string is None or len(json_string) == 0:
+            return '{}'
         return (json.loads(json_string))
