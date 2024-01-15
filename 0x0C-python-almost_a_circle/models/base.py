@@ -3,6 +3,7 @@
 
 
 class Base:
+    """class"""
     __nb_objects = 0
 
     """class constructor"""
