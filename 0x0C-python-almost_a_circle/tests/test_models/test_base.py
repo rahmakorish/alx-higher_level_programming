@@ -1,17 +1,11 @@
 #!/usr/bin/python3
+"""this test module"""
 import unittest
-
-class Base:
-    __nb_objects = 0
-
-    """class constructor"""
-    def __init__(self, id=None):
-        """init method"""
-        if (id != None):
-            self.id = id
-        elif (id == None):
-            Base.__nb_objects += 1
-            self.id = self.__nb_objects
+import os.path
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
+"""tests the Base"""
 
 
 class BaseTest(unittest.TestCase):
