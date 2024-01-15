@@ -75,11 +75,13 @@ class Rectangle(Base):
 
     def __str__(self):
         """override str function"""
-        return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
+        return f'[Rectangle] ({self.id}) {self.x}/{self.y}'
+    #  - {self.width}/{self.height}'
 
     def to_dictionary(self):
         """print dictionary"""
-        return {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
+        return {'id': self.id, 'width': self.width}
+    # , 'height': self.height, 'x': self.x, 'y': self.y}
 
     def display(self):
         """override display()"""
