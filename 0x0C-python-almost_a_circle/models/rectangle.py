@@ -114,15 +114,17 @@ class Rectangle(Base):
             if len(args) >= 5:
                 self.__y = args[4]
         elif not kwargs:
+            keys = ['id', 'width', 'height', 'x', 'y']
             for key, value in kwargs.items():
-                if key == 'id':
-                    self.id = value
-                if key == 'width':
-                    self.__width = value
-                if key == 'height':
-                    self.__height = value
-                if key == 'x':
-                    self.__x = value
-                if key == 'y':
-                    self.__y = value
+                if key in keys:
+                    if key == 'id':
+                        self.id = value
+                    if key == 'width':
+                        self.__width = value
+                    if key == 'height':
+                        self.__height = value
+                    if key == 'x':
+                        self.__x = value
+                    if key == 'y':
+                        self.__y = value
                 # print(f' {key} ,{value}')
