@@ -26,7 +26,9 @@ class Square(Rectangle):
 
     def __str__(self):
         """override str"""
-        print(f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
+         return "[{}] ({}) {}/{} - {}".format(
+            type(self).__name__, self.id, self.x, self.y,
+            self.size)
 
     def to_dictionary(self):
         """dixtionary """
