@@ -5,7 +5,7 @@ from base import Base
 
 class Rectangle(Base):
     """class Rectangle"""
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """class constructor"""
         self.width = width
@@ -114,7 +114,7 @@ class Rectangle(Base):
                 self.__x = args[3]
             if len(args) >= 5:
                 self.__y = args[4]
-        elif kwargs is None:
+        elif not kwargs:
             for key, value in kwargs.items():
                 if key == 'id':
                     self.id = value
