@@ -87,19 +87,9 @@ class Rectangle(Base):
 
     def display(self):
         """override display()"""
-        shape = ""
-        if self.__width == 0 or self.__height == 0:
-            for z in range(0, self.__y):
-                shape += (" " * self.__x)
-        for k in range(0, self.__height):
-            for z in range(0, self.__y):
-                shape = (" " * self.__x)
-                if z != self.__y - 1:
-                    shape = "\n"
-            shape += ('#' * self.__width)
-            if k != self.__height - 1:
-                shape += "\n"
-        print(shape)
+        print("\n" * self.__y, end="")
+        line = " " * self.__x + "#" * self.__width + '\n'
+        print(line * self.__height, end="")
 
     def update(self, *args, **kwargs):
         """update()"""
