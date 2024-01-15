@@ -113,10 +113,10 @@ class Rectangle(Base):
                 self.__x = args[3]
             if len(args) >= 5:
                 self.__y = args[4]
-        elif not kwargs:
-            keys = ['id', 'width', 'height', 'x', 'y']
+        elif kwargs:
+            keysx = {'id', 'width', 'height', 'x', 'y'}
             for key, value in kwargs.items():
-                if key in keys:
+                if key in keysx:
                     if key == 'id':
                         self.id = value
                     if key == 'width':
@@ -127,4 +127,3 @@ class Rectangle(Base):
                         self.__x = value
                     if key == 'y':
                         self.__y = value
-                # print(f' {key} ,{value}')
