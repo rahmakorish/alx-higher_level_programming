@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""input"""
+"""Module 0-reaf"_file
+read from given file
+"""
 
 
 def read_file(filename=""):
-	"""read file"""	
-	with open(filename, encoding="UTF8") as f:
+	"""read file and print to std
+	Args:
+	- filename:given file
+	"""	
+	with open(filename) as f:
 		file_data = f.read()
-		if not file_data:
-			f.close()
-			pass
-		else:
-			print (file_data)
-			f.close()
+		print(file_data)
