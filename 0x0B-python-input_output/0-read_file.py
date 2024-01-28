@@ -8,4 +8,5 @@ def read_file(filename=""):
 		file_data = f.read()
 		if not file_data:
 			pass 
-		print(file_data)
+		else:
+			print(file_data)
