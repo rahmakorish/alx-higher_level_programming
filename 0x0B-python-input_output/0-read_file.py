@@ -7,6 +7,8 @@ def read_file(filename=""):
 	with open(filename, encoding="UTF8") as f:
 		file_data = f.read()
 		if not file_data:
-			pass 
+			f.close()
+			pass
 		else:
-			print(file_data)
+			print (file_data)
+			f.close()
