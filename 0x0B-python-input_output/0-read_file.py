@@ -9,6 +9,6 @@ def read_file(filename=""):
 	Args:
 	- filename:given file
 	"""	
-	with open(filename) as f:
+	with open(filename, 'r') as f:
 		file_data = f.read()
-		print(file_data)
+		print(file_data.strip())
