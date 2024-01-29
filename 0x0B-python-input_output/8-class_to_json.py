@@ -8,4 +8,4 @@ def class_to_json(obj):
 	ARGS:
 	-obj: object to be presented
 	"""
-	return obj.__doc__
+	return obj.__dict__
