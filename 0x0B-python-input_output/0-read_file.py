@@ -1,6 +1,14 @@
 #!/usr/bin/python3
-"""input"""
+"""Module 0-reaf"_file
+read from given file
+"""
 
 
-def write_file(filename="", text=""):
-    file = open(filename,wx)
+def read_file(filename=""):
+	"""read file and print to std
+	Args:
+	- filename:given file
+	"""	
+	with open(filename, 'r') as f:
+		file_data = f.read()
+		print(file_data.strip())
