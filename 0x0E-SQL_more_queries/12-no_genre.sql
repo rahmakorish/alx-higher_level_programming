@@ -3,5 +3,5 @@ SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
 left JOIN tv_show_genres
 ON tv_shows.id = tv_show_genres.genre_id
-where tv_show_genres.genre_id IS NULL
+where tv_show_genres.genre_id = NULL
 ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
