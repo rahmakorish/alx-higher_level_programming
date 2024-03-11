@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const x = Number(process.argv[2]);
-let i = 0;
-let f = x - 1;
-while (f > 0){
-  f * i;
+let sum = 1;
+let f = x;
+while (f > 1) {
+  sum *= f;
   f--;
-  i--;
 }
+console.log(sum);
