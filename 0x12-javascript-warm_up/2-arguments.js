@@ -1,2 +1,2 @@
 #!/usr/bin/node
-console.log(arguments.length);
+console.log(process.argv.length);
