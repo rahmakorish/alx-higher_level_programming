@@ -1,7 +1,6 @@
 #!/usr/bin/node
-if (process.argv){
+if (process.argv == 2) {
 console.log('Argument found');
-}
-else{
+} else {
 console.log('No argument');
 }
