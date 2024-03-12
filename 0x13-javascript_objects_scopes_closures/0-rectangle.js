@@ -1,4 +1,7 @@
 #!/usr/bin/node
 exports.Rectangle = class Rectangle {
-	constructor();
+	constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
 };
