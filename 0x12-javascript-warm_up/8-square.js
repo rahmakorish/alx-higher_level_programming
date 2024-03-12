@@ -13,12 +13,13 @@ if (!Number(i)) {
       x++;
     }
     total += out;
-    j++;
-    if (j !== i) {
-      total += '\n';
+    
+    if (j === i) {
+      continue
     } else {
-      continue;
+      total += '\n';
     }
+    j++;
   }
 }
 console.log(total);
