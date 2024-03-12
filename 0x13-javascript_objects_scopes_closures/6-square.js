@@ -9,7 +9,7 @@ class Square extends superSquare {
       let out = '';
       for (let x = 0; x < this.height; x++) {
         for (let i = 0; i < this.width; i++) {
-          out += 'c';
+          out += c;
         }
         if (x < this.height - 1) {
           out += '\n';
