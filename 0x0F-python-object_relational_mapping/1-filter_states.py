@@ -14,10 +14,10 @@ if __name__ == "__main__":
         port=3306
     )
 
-    mycursor = my_connection.cursor()
-    mycursor.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id ASC;")
-    states = mycursor.fetchall()
+    cur = my_connection.cursor()
+    cur.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id ASC;")
+    states = cur.fetchall()
     for state in states:
         print(state)
-    mycursor.close()
+    cur.close()
     my_connection.close()
