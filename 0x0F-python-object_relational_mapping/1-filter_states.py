@@ -13,7 +13,7 @@ if __name__ == "__main__":
         host=3306
     )
     cur = mydb.cursor()
-    cur.execute("Select * FROM states WHERE name LIKE 'N%';")
+    cur.execute("Select * FROM states WHERE name LIKE 'N%' ORDER BY state.id ASC;")
     states = cur.fetchall()
     for state in states:
         print(state)
