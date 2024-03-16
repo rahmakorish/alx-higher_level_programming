@@ -1,12 +1,15 @@
 #!/usr/bin/python3
+"""python file"""
+
+
 import MySQLdb
 import sys
 
 my_connection = MySQLdb.connect(
-    host = sys.argv[1],
-    user = sys.argv[2],
-    password = sys.argv[3],
-    port = 3306
+    host=sys.argv[1],
+    user=sys.argv[2],
+    password=sys.argv[3],
+    port=306
 )
 
 mycursor = my_connection.cursor()
