@@ -5,17 +5,18 @@
 import MySQLdb
 import sys
 
-my_connection = MySQLdb.connect(
-    host=sys.argv[1],
-    user=sys.argv[2],
-    password=sys.argv[3],
-    port=306
-)
+if __name__ == "__main__":
+    my_connection = MySQLdb.connect(
+        db=sys.argv[3],
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        port=3306
+    )
 
-mycursor = my_connection.cursor()
-mycursor.execute("SELECT * FROM states ORDER BY id ASC")
-states = cursor.fetchall()
-for state in states:
-    print(state)
-
-print('success')
+    mycursor = my_connection.cursor()
+    mycursor.execute("SELECT * FROM states ORDER BY id ASC;")
+    states = mycursor.fetchall()
+    for state in states:
+        print(state)
+    mycursor.close()
+    my_connection.close()
