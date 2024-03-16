@@ -13,9 +13,9 @@ if __name__ == "__main__":
         host="localhost",
         port=3306
     )
-    value=sys.argv[4]
+    value = sys.argv[4]
     cur = mydb.cursor()
-    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY states.id;",(value,))
+    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY states.id;", (value,))
     states = cur.fetchall()
     for state in states:
         print(state)
