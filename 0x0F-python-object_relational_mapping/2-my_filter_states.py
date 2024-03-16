@@ -13,7 +13,7 @@ if __name__ == "__main__":
     )
     value=sys.argv[4]
     cur = mydb.cursor()
-    cur.execute("SELECT * FROM states WHERE name =$s ORDER BY state.id;",(value))
+    cur.execute("SELECT * FROM states WHERE name =%s ORDER BY state.id;",(value))
     states = cur.fetchall()
     for state in states:
         print(state)
