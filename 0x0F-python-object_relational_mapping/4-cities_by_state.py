@@ -14,7 +14,7 @@ if __name__ == "__main__":
         port=3306
     )
     cur = mydb.cursor()
-    cur.execute("SELECT * FROM cities ORDER BY cities.id ASC;")
+    cur.execute("SELECT state_id, name FROM cities ORDER BY cities.id ASC;")
     citylist = cur.fetchall()
     for city in citylist:
         print(city)
