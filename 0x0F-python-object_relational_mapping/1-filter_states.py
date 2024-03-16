@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-"""this module filter atates"""
+"""python file"""
 
 
-import sys
 import MySQLdb
+import sys
 
 if __name__ == "__main__":
-    mydb = MySQLdb.connect(
+    my_connection = MySQLdb.connect(
+        host="localhost",
+        db=sys.argv[3],
         user=sys.argv[1],
         passwd=sys.argv[2],
-        db=sys.argv[3],
-        host="localhost",
         port=3306
     )
-    cur = mydb.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY state.id ASC;")
-    states = cur.fetchall()
+
+    mycursor = my_connection.cursor()
+    mycursor.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id ASC;")
+    states = mycursor.fetchall()
     for state in states:
         print(state)
-    cur.close()
-    mydb.close()
+    mycursor.close()
+    my_connection.close()
