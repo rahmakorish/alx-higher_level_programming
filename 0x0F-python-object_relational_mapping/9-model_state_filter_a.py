@@ -2,6 +2,8 @@
 """
 Lists all State objects from the database hbtn_0e_6_usa
 """
+
+
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -16,7 +18,7 @@ if __name__ == '__main__':
     session = Session()
 
     a_states = session.query(State).filter(
-        State.name.like('%n%')).order_by(State.id).all()
+        State.name.like("%\a%")).order_by(State.id).all()
 
     for state in a_states:
         print("{}: {}".format(state.id, state.name))
