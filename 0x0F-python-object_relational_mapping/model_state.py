@@ -2,10 +2,17 @@
 """first state model"""
 
 
-import SQLAlchemy
+from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy.ext.declarative import declarative_base
 
-Base = SQLAlchemy.declarative_base()
+Base = declarative_base()
 class State(Base):
-    id:Mapped[int]=mapped_coloumn(primary_key=True, unique=True,\
-        nullable = False)
-    name:Mapped[str]= mapped_coloumn(nullable=False, max(128))
+    """class"""
+    __tablename__='states'
+    id=Column(Integer, primary_key=True, unique=True,\
+        nullable = False, autoincrement=True)
+    name=Column(String(128), nullable=False)
+
+engine=create_engine('sqlite:///6-model_state.sql')
+if __name__ == '__main__':
+    Base.metadata.create_all(engine)
