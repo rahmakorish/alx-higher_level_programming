@@ -15,7 +15,10 @@ if __name__ == "__main__":
     )
     state_name = sys.argv[4]
     mycursor = my_connection.cursor()
-    mycursor.execute("SELECT * FROM cities ORDER BY cities.id ASC;")
+    mycursor.execute("SELECT cities.name FROM cities JOIN\
+                     states ON cities.state_id = states.id\
+                     where states.name = '{}'\
+                     ORDER BY cities.id ASC;".format(state_name))
     states = mycursor.fetchall()
     for state in states:
         print(state)
