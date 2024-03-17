@@ -19,5 +19,7 @@ if __name__ == '__main__':
     engine = create_engine('sqlite:///7-model_state_fetch_all.sql')
 
     result = engine.execute('SELECT id: name FROM states WHERE id = 1 ORDER BY states.id;')
-    for state in result:
-        print(state)
+    if result:
+        print(result)
+    else:
+        print('Nothing')
