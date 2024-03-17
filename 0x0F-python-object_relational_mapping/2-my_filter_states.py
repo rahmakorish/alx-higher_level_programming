@@ -13,7 +13,6 @@ if __name__ == "__main__":
         db=sys.argv[3],
         port=3306
     )
-    
     cur = mydb.cursor()
     namevalue = sys.argv[4]
     cur.execute("SELECT * FROM states WHERE name = '{}'\
