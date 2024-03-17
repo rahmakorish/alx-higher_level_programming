@@ -4,8 +4,7 @@ list all states
 """
 from model_state import Base, State
 from sqlalchemy import create_engine
-from sqlalchemy import sessionmaker
-from sqlalchemy.engine.url import URL
+from sqlalchemy.orm import sessionmaker
 import sys
 
 
@@ -17,6 +16,6 @@ if __name__ == '__main__':
     session = Session()
 
     states = session.query(State).order_by(State.id).all()
-    
+
     for state in states:
         print('{}: {}'.format(state.id, state.name))
