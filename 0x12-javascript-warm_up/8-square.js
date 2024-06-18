@@ -15,7 +15,7 @@ if (!Number(i)) {
     total += out;
     
     if (j === i) {
-      continue
+      continue;
     } else {
       total += '\n';
     }
