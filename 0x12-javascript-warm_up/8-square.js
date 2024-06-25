@@ -13,7 +13,7 @@ if (!Number(i)) {
       x++;
     }
     total += out;
-    
+
     if (j === i) {
       continue;
     } else {
